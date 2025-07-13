@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container bg-info p-4 rounded-4 my-3">
+        <h1 class="text-center">CRUD SYSTEM</h1>
+
+        <div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="productName"
+              placeholder=""
+            />
+            <label for="productName">ProductName</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="number"
+              class="form-control"
+              id="productPrice"
+              placeholder=""
+            />
+            <label for="productPrice">ProductPrice</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              list="list"
+              type="text"
+              class="form-control"
+              id="productCategory"
+              placeholder=""
+            />
+            <label for="productCategory">ProductCategory</label>
+            <datalist id="list">
+              <option value="tv"></option>
+              <option value="mobile"></option>
+              <option value="screens"></option>
+              <option value="electronics"></option>
+            </datalist>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea
+              style="height: 100px"
+              type="text"
+              class="form-control"
+              id="productDescription"
+              placeholder=""
+            ></textarea>
+            <label for="productDescription">ProductDescription</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="file"
+              class="form-control"
+              id="productImg"
+              placeholder=""
+            />
+            <label for="productImg">ProductImg</label>
+          </div>
+          <div>
+            <button
+              onclick="addProduct()"
+              id="addBtn"
+              class="btn btn-primary btn-sm"
+            >
+              Add Product
+            </button>
+            <button
+              onclick="updateProduct()"
+              id="updateBtn"
+              class="btn btn-warning btn-sm d-none"
+            >
+              Update Product
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container-fluid">
+        <input
+          type="search"
+          class="form-control w-50 mx-auto my-4"
+          placeholder="search by name"
+          oninput="searchData()"
+          id="searchInput"
+        />
+        <div
+          id="rowData"
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 my-4 g-4 data border"
+        >
+          <!-- <div class="col-md-3">
+            <div class="card">
+              <img class="card-img-top" src="Imgs/chefs-1.jpg " alt="Title" />
+              <div class="card-body text-center">
+                <span>index</span>
+                <h4 class="card-title">Product Name</h4>
+                <p class="card-text">ProductPrice</p>
+                <p class="card-text">ProductCategory</p>
+                <p class="card-text">ProductDescription</p>
+              </div>
+              <div class="card-footer text-center">
+                <button class="btn btn-danger btn-sm">Delete</button>
+                <button class="btn btn-warning btn-sm">Update</button>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
